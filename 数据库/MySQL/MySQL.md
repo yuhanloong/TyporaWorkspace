@@ -2,7 +2,7 @@
 
 官网下载 8.0 的最高版本的 .dmg 直接安装。
 
-配置环境变量（好像不用）
+配置环境变量
 
 ```bash
 # 打开 bash shell 和 zsh shell 的环境变量文件
@@ -34,5 +34,6 @@ sudo /usr/local/mysql/support-files/mysql.server restart
 登陆
 
 ```bash
+# 登陆
 mysql -uroot -padministrator
 ```

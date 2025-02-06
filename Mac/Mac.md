@@ -33,3 +33,20 @@ homebrew 目录结构：
 - /opt/homebrew/bin          用于存放所有安装程序的启动链接（相当于快捷方式）
 - /opt/homebrew/etc          安装程序的配置文件默认存放路径
 - /opt/homebrew/opt          homebrew 下载软件包存放路径
+
+# 解决每次需要加 sudo 赋权限的问题
+
+```bash
+# 将文件夹的所有者更改为您当前的用户
+sudo chown -R $(whoami) 文件夹路径
+
+# 固定赋权限
+sudo chown -R $(whoami) /Users/longyuhuan/Documents/IntelliJIDEAWorkspace
+sudo chown -R $(whoami) /Users/longyuhuan/Documents/PyCharmWorkspace
+sudo chown -R $(whoami) /Users/longyuhuan/Documents/WebStormWorkspace
+sudo chown -R $(whoami) /Users/longyuhuan/Documents/HBuilderWorkspace
+sudo chown -R $(whoami) /Users/longyuhuan/Documents/WeChatWorkspace
+sudo chown -R $(whoami) /Users/longyuhuan/Documents/TyporaWorkspace
+sudo chown -R $(whoami) /Users/longyuhuan/.npm/*
+```
+

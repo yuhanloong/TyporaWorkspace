@@ -1,9 +1,32 @@
-# 操作：
+# 配置
 
 ```bash
-# 设置在拉取时合并远程分支的更改。如果有冲突，需要手动解决。这是默认策略
+# 设置用户名和邮箱
+git config --global user.name "longyuhuan"
+git config --global user.email "longyuhuanweb@icloud.com"
+
+# 设置拉取代码时默认使用 merge 而不是 rebase。如果有冲突，需要手动解决
 git config --global pull.rebase false
 
+# 创建并设置全局忽略文件
+touch ~/.gitignore_global
+git config --global core.excludesfile ~/.gitignore_global
+# 打开全局忽略文件
+open -e ~/.gitignore_global
+# 写入忽略
+.DS_Store
+**/.DS_Store
+.DS_Store?
+
+# 生成 SSH 密钥
+ssh-keygen -t rsa -b 4096 -C "longyuhuanweb@icloud.com"
+# 查看密钥，将此密钥配置到 github
+cat ~/.ssh/id_rsa.pub
+```
+
+# 操作
+
+```bash
 # 拉取
 git pull
 
@@ -32,9 +55,9 @@ git commit -m 'update'
 git push
 
 # 更换远程仓库地址
-# 查看远端地址
+# 查看远端地址（https://github.com/ABoringPersonLong/TyporaWorkspace.git）
 git remote -v
-# 查看远端仓库名
+# 查看远端仓库名（origin）
 git remote
 # 重新设置远程仓库
 git remote set-url origin https://gitee.com/xx/xx.git
