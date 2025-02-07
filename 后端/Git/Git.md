@@ -22,6 +22,17 @@ open -e ~/.gitignore_global
 ssh-keygen -t rsa -b 4096 -C "longyuhuanweb@icloud.com"
 # 查看密钥，将此密钥配置到 github
 cat ~/.ssh/id_rsa.pub
+
+# 配置 github 主机IP映射
+# 获取ip
+ping github.com
+# 打开 hosts 文件
+sudo vi /etc/hosts
+# 添加以下内容，20.205.243.166 是 ping 出来的IP
+# github
+20.205.243.166 github.com
+# 再访问这个网站，把里面的地址全部添加到 hosts
+https://raw.hellogithub.com/hosts
 ```
 
 # 操作
