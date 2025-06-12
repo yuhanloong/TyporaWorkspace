@@ -41,11 +41,8 @@ homebrew 目录结构：
 sudo chown -R $(whoami) 文件夹路径
 
 # 固定赋权限
-sudo chown -R $(whoami) /Users/longyuhuan/Documents/IntelliJIDEAWorkspace
-sudo chown -R $(whoami) /Users/longyuhuan/Documents/PyCharmWorkspace
-sudo chown -R $(whoami) /Users/longyuhuan/Documents/WebStormWorkspace
-sudo chown -R $(whoami) /Users/longyuhuan/Documents/HBuilderWorkspace
-sudo chown -R $(whoami) /Users/longyuhuan/Documents/WeChatWorkspace
+sudo chown -R $(whoami) /Users/longyuhuan/Documents/BackEndWorkspace
+sudo chown -R $(whoami) /Users/longyuhuan/Documents/FrontEndWorkspace
 sudo chown -R $(whoami) /Users/longyuhuan/Documents/TyporaWorkspace
 sudo chown -R $(whoami) /Users/longyuhuan/.npm/*
 ```

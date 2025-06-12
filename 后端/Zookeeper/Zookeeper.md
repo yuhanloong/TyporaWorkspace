@@ -108,11 +108,25 @@ delete /user
 deleteall /user
 ```
 
-# 3.JavaAPI操作
+# 3.JavaAPI操作-Curator
 
-## CuratorAPI操作
+## 导入依赖
 
-### 建立连接
+```xml
+<!-- curator（操作 zookeeper） -->
+<dependency>
+  <groupId>org.apache.curator</groupId>
+  <artifactId>curator-framework</artifactId>
+  <version>4.1.0</version>
+</dependency>
+<dependency>
+  <groupId>org.apache.curator</groupId>
+  <artifactId>curator-recipes</artifactId>
+  <version>4.1.0</version>
+</dependency>
+```
+
+## 建立连接
 
 ```java
 // 建立的连接对象
@@ -165,7 +179,7 @@ public void after1() {
 }
 ```
 
-### 查询节点
+## 查询节点
 
 ```java
 /**
@@ -201,7 +215,7 @@ public void test1() throws Exception {
 }
 ```
 
-### 创建节点
+## 创建节点
 
 ```java
 /**
@@ -233,7 +247,7 @@ public void test2() throws Exception {
 }
 ```
 
-### 修改节点
+## 修改节点
 
 ```java
 /**
@@ -255,7 +269,7 @@ public void test3() throws Exception {
 }
 ```
 
-### 删除节点
+## 删除节点
 
 ```java
 /**
@@ -281,7 +295,7 @@ public void test4() throws Exception {
 }
 ```
 
-### watch 事件监听
+## watch 事件监听
 
 zookeeper 提供了三种 watcher：
 

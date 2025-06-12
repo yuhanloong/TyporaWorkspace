@@ -2,8 +2,8 @@
 
 ```bash
 # 设置用户名和邮箱
-git config --global user.name "longyuhuan"
-git config --global user.email "longyuhuanweb@icloud.com"
+git config --global user.name "yuhanloong"
+git config --global user.email "yuhanloong@icloud.com"
 
 # 设置拉取代码时默认使用 merge 而不是 rebase。如果有冲突，需要手动解决
 git config --global pull.rebase false
@@ -19,19 +19,19 @@ open -e ~/.gitignore_global
 .DS_Store?
 
 # 生成 SSH 密钥
-ssh-keygen -t rsa -b 4096 -C "longyuhuanweb@icloud.com"
+ssh-keygen -t rsa -b 4096 -C "yuhanloong@icloud.com"
 # 查看密钥，将此密钥配置到 github
 cat ~/.ssh/id_rsa.pub
 
-# 配置 github 主机IP映射
+# 配置 github 主机IP映射，加速 github 的访问
 # 获取ip
 ping github.com
 # 打开 hosts 文件
 sudo vi /etc/hosts
-# 添加以下内容，20.205.243.166 是 ping 出来的IP
+# 将获取到的 ip 添加进去，20.205.243.166 是获取到的IP
 # github
 20.205.243.166 github.com
-# 再访问这个网站，把里面的地址全部添加到 hosts
+# 再访问这个网站，把里面的地址全部追加进去
 https://raw.hellogithub.com/hosts
 ```
 
@@ -66,12 +66,12 @@ git commit -m 'update'
 git push
 
 # 更换远程仓库地址
-# 查看远端地址（https://github.com/ABoringPersonLong/TyporaWorkspace.git）
+# 查看远端地址（https://github.com/yuhanloong/TyporaWorkspace.git）
 git remote -v
 # 查看远端仓库名（origin）
 git remote
 # 重新设置远程仓库
-git remote set-url origin https://gitee.com/xx/xx.git
+git remote set-url origin https://github.com/yuhanloong/TyporaWorkspace.git
 ```
 
 # 1. 起步
@@ -231,8 +231,8 @@ Git 之所以快速和高效，主要依赖于它的如下两个特性：
 
 设置用户信息：
 
-- git config --global user.name "longyuhuan"
-- git config --global user.email "longyuhuanweb@icloud.com"
+- git config --global user.name "yuhanloong"
+- git config --global user.email "yuhanloong@icloud.com"
 
 注意：如果使用了 **--global** 选项，那么该命令只需要运行一次，即可永久生效。
 
@@ -620,7 +620,7 @@ SSH 由**两部分组成**，分别是：
 
 2. 粘贴如下的命令（-C 后面跟的是 Github 账号的邮箱）：
 
-    ssh-keygen -t rsa -b 4096 -C "longyuhuanweb@icloud.com"
+    ssh-keygen -t rsa -b 4096 -C "yuhanloong@icloud.com"
 
 3. 连续敲击3次回车，即可在 C:/Users/用户名文件夹/.ssh 目录中生成 id_ras 和 id_rsa.pub 两个文件
 

@@ -26,41 +26,61 @@
 
 ## 架构演进
 
+![](./images/架构演进.jpg)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Dubbo 是 SOA时代的产物，SpringCloud 是微服务时代的产物
 
 # 2.Dubbo概述
+
+- Dubbo 是阿里巴巴公司开源的一个高性能、轻量级的 Java RPC 框架
+- 致力于提供高性能和透明化的 RPC 远程服务调用方案，以及 SOA 服务治理方案
+- 官网：http://dubbo.apache.org
+
+Dubbo 架构
+
+![](./images/Dubbo架构.jpg)
+
+- Provider：暴露服务的服务提供方
+- Container：服务运行容器
+- Consumer：调用远程服务的服务消费方
+- Registry：服务注册与发现的注册中心
+- Monitor：统计服务的调用次数和调用时间的监控中心
+
+实现步骤
+
+1. 创建服务提供者 Provider 模块
+2. 创建服务消费者 Consumer 模块
+3. 在服务提供者模块编写 UserServicelmpl 提供服务
+4. 在服务消费者中的 UserController 远程调用 UserServicelmpl 提供的服务
+5. 分别启动两个服务，测试
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # 3.Dubbo快速入门
 
